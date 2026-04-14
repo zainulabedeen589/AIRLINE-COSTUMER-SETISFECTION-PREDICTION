@@ -1,0 +1,94 @@
+[2026-04-07 21:45:02,927] src.data_ingestion - INFO - Data Ingestion has started
+[2026-04-07 21:45:02,928] src.data_ingestion - INFO - Directory for Ingestion created
+[2026-04-07 21:45:03,065] src.data_ingestion - INFO - Data loaded successfully with shape: (129880, 25)
+[2026-04-07 21:45:03,077] src.data_ingestion - INFO - Data Splitted Sucessfully
+[2026-04-07 21:45:03,545] src.data_ingestion - INFO - Training and testing data saved sucesffuly
+[2026-04-07 21:45:03,550] src.data_processing - INFO - Starting the pipeline of Data Procesing
+[2026-04-07 21:45:03,550] src.data_processing - INFO - Data Processinng Started
+[2026-04-07 21:45:03,657] src.data_processing - INFO - Data read succesfull : Data shape : (103904, 25)
+[2026-04-07 21:45:03,657] src.data_processing - INFO - Dropping Unnecesary Columns :  ['index', 'id']
+[2026-04-07 21:45:03,664] src.data_processing - INFO - Columns dropped Sucesfully : Shape = (103904, 23)
+[2026-04-07 21:45:03,665] src.data_processing - INFO - Handling outliers : Columns = ['Flight Distance', 'Departure Delay in Minutes', 'Arrival Delay in Minutes', 'Checkin service']
+[2026-04-07 21:45:03,678] src.data_processing - INFO - Outliers handled  Sucesffuully : (103904, 23)
+[2026-04-07 21:45:03,679] src.data_processing - INFO - Handling null values
+[2026-04-07 21:45:03,680] src.data_processing - INFO - Missing values handled sucessfully : Shape == (103904, 23)
+[2026-04-07 21:45:04,357] src.data_processing - INFO - Processed data saved sucesfully
+[2026-04-07 21:45:04,357] src.data_processing - INFO - Data Proccesing Pipeline Completed Sucessfully
+[2026-04-07 21:45:04,359] src.feature_engineering - INFO - Starting your feature enginnering pipeline
+[2026-04-07 21:45:04,359] src.feature_engineering - INFO - Loading data
+[2026-04-07 21:45:04,468] src.feature_engineering - INFO - Data loaded sucesffuly
+[2026-04-07 21:45:04,469] src.feature_engineering - INFO - Starting Feature Construction
+[2026-04-07 21:45:04,470] src.feature_engineering - INFO - Feature Construction done sucesfully
+[2026-04-07 21:45:04,470] src.feature_engineering - INFO - Starting Binning of Age Column
+[2026-04-07 21:45:04,473] src.feature_engineering - INFO - Binning of Age Column Sucesfull
+[2026-04-07 21:45:04,473] src.feature_engineering - INFO - Performing label encoding on ['Gender', 'Customer Type', 'Type of Travel', 'Class', 'satisfaction', 'Age Group']
+[2026-04-07 21:45:04,529] src.feature_engineering - INFO - Mapping for Gender : {'Female': np.int64(0), 'Male': np.int64(1)}
+[2026-04-07 21:45:04,529] src.feature_engineering - INFO - Mapping for Customer Type : {'Loyal Customer': np.int64(0), 'disloyal Customer': np.int64(1)}
+[2026-04-07 21:45:04,529] src.feature_engineering - INFO - Mapping for Type of Travel : {'Business travel': np.int64(0), 'Personal Travel': np.int64(1)}
+[2026-04-07 21:45:04,529] src.feature_engineering - INFO - Mapping for Class : {'Business': np.int64(0), 'Eco': np.int64(1), 'Eco Plus': np.int64(2)}
+[2026-04-07 21:45:04,529] src.feature_engineering - INFO - Mapping for satisfaction : {'neutral or dissatisfied': np.int64(0), 'satisfied': np.int64(1)}
+[2026-04-07 21:45:04,529] src.feature_engineering - INFO - Mapping for Age Group : {'Adult': np.int64(0), 'Child': np.int64(1), 'Senior': np.int64(2), 'Youngster': np.int64(3)}
+[2026-04-07 21:45:04,529] src.feature_engineering - INFO - Label Encoding sucesffull
+[2026-04-07 21:45:04,529] src.feature_engineering - INFO - Starting Feature Selection
+[2026-04-07 21:45:04,773] src.feature_engineering - INFO - Mutual Information Table is : 
+                              Feature  Mutual Information
+11                    Online boarding            0.211404
+23                        Delay Ratio            0.189621
+6               Inflight wifi service            0.163403
+4                               Class            0.134738
+3                      Type of Travel            0.115107
+13             Inflight entertainment            0.093614
+5                     Flight Distance            0.085180
+12                       Seat comfort            0.078897
+15                   Leg room service            0.060221
+14                   On-board service            0.057691
+19                        Cleanliness            0.053038
+8              Ease of Online booking            0.050788
+2                                 Age            0.045754
+16                   Baggage handling            0.043412
+18                   Inflight service            0.040986
+17                    Checkin service            0.032488
+10                     Food and drink            0.026824
+24                          Age Group            0.021074
+1                       Customer Type            0.017606
+9                       Gate location            0.012505
+21           Arrival Delay in Minutes            0.006167
+22                        Total Delay            0.005020
+20         Departure Delay in Minutes            0.002824
+7   Departure/Arrival time convenient            0.002368
+0                              Gender            0.000080
+[2026-04-07 21:45:04,777] src.feature_engineering - INFO - Top features : ['Online boarding', 'Delay Ratio', 'Inflight wifi service', 'Class', 'Type of Travel', 'Inflight entertainment', 'Flight Distance', 'Seat comfort', 'Leg room service', 'On-board service', 'Cleanliness', 'Ease of Online booking']
+[2026-04-07 21:45:04,777] src.feature_engineering - INFO - Feature Selection Sucesfull
+[2026-04-07 21:45:04,778] src.feature_engineering - INFO - Saving your data ...
+[2026-04-07 21:45:05,176] src.feature_engineering - INFO - Data Saved succesfully at ./artifact/engineered_data/final_df.csv
+[2026-04-07 21:45:05,176] src.feature_engineering - INFO - Your FE pipeline sucesfully done..
+[2026-04-07 21:45:05,176] src.feature_engineering - INFO - End of FE pipeline
+[2026-04-07 21:45:05,181] root - WARNING - Malformed experiment '1'. Detailed error Yaml file '/Users/Apple/ZAINUL_AI/DS/ML-Project/AIRLINE COSTUMER SETISFECTION PREDICTION/mlruns/1/meta.yaml' does not exist.
+Traceback (most recent call last):
+  File "/Users/Apple/ZAINUL_AI/DS/ML-Project/AIRLINE COSTUMER SETISFECTION PREDICTION/.venv/lib/python3.12/site-packages/mlflow/store/tracking/file_store.py", line 383, in search_experiments
+    exp = self._get_experiment(exp_id, view_type)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Apple/ZAINUL_AI/DS/ML-Project/AIRLINE COSTUMER SETISFECTION PREDICTION/.venv/lib/python3.12/site-packages/mlflow/store/tracking/file_store.py", line 481, in _get_experiment
+    meta = FileStore._read_yaml(experiment_dir, FileStore.META_DATA_FILE_NAME)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Apple/ZAINUL_AI/DS/ML-Project/AIRLINE COSTUMER SETISFECTION PREDICTION/.venv/lib/python3.12/site-packages/mlflow/store/tracking/file_store.py", line 1670, in _read_yaml
+    return _read_helper(root, file_name, attempts_remaining=retries)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Apple/ZAINUL_AI/DS/ML-Project/AIRLINE COSTUMER SETISFECTION PREDICTION/.venv/lib/python3.12/site-packages/mlflow/store/tracking/file_store.py", line 1663, in _read_helper
+    result = read_yaml(root, file_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Apple/ZAINUL_AI/DS/ML-Project/AIRLINE COSTUMER SETISFECTION PREDICTION/.venv/lib/python3.12/site-packages/mlflow/utils/yaml_utils.py", line 104, in read_yaml
+    raise MissingConfigException(f"Yaml file '{file_path}' does not exist.")
+mlflow.exceptions.MissingConfigException: Yaml file '/Users/Apple/ZAINUL_AI/DS/ML-Project/AIRLINE COSTUMER SETISFECTION PREDICTION/mlruns/1/meta.yaml' does not exist.
+[2026-04-07 21:45:05,413] src.model_training - INFO - Loading data for model training...
+[2026-04-07 21:45:05,469] src.model_training - INFO - Data loaded successfully.
+[2026-04-07 21:45:05,469] src.model_training - INFO - Splitting data into train and test sets...
+[2026-04-07 21:45:05,479] src.model_training - INFO - Data splitting completed.
+[2026-04-07 21:45:05,479] src.model_training - INFO - Hyperparameters loaded: {'learning_rate': [0.01, 0.05, 0.1], 'n_estimators': [100, 200, 300], 'max_depth': [5, 10, 15]}
+[2026-04-07 21:45:05,481] src.model_training - INFO - Starting GridSearchCV with LightGBM...
+[2026-04-07 21:47:01,956] src.model_training - INFO - Model training completed.
+[2026-04-07 21:47:01,958] src.model_training - INFO - Evaluating model...
+[2026-04-07 21:47:02,013] src.model_training - INFO - Evaluation metrics: {'accuracy': 0.9437948125691737, 'precision': 0.943825712106087, 'recall': 0.9437948125691737, 'f1_score': 0.9437019144062373, 'confusion_matrix': [[11391, 474], [694, 8222]]}
+[2026-04-07 21:47:02,019] src.model_training - INFO - Saving model to ./artifact/models/trained_model.pkl
+[2026-04-07 21:47:02,023] src.model_training - INFO - Model saved successfully.
+[2026-04-07 21:47:04,686] src.model_training - INFO - Run successful. Tracking URI: file:///Users/Apple/ZAINUL_AI/DS/ML-Project/AIRLINE COSTUMER SETISFECTION PREDICTION/mlruns

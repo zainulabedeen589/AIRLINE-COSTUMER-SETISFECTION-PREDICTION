@@ -1,0 +1,46 @@
+[2026-04-07 21:37:29,105] root - WARNING - Malformed experiment '1'. Detailed error Yaml file '/Users/Apple/ZAINUL_AI/DS/ML-Project/AIRLINE COSTUMER SETISFECTION PREDICTION/mlruns/1/meta.yaml' does not exist.
+Traceback (most recent call last):
+  File "/Users/Apple/ZAINUL_AI/DS/ML-Project/AIRLINE COSTUMER SETISFECTION PREDICTION/.venv/lib/python3.12/site-packages/mlflow/store/tracking/file_store.py", line 383, in search_experiments
+    exp = self._get_experiment(exp_id, view_type)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Apple/ZAINUL_AI/DS/ML-Project/AIRLINE COSTUMER SETISFECTION PREDICTION/.venv/lib/python3.12/site-packages/mlflow/store/tracking/file_store.py", line 481, in _get_experiment
+    meta = FileStore._read_yaml(experiment_dir, FileStore.META_DATA_FILE_NAME)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Apple/ZAINUL_AI/DS/ML-Project/AIRLINE COSTUMER SETISFECTION PREDICTION/.venv/lib/python3.12/site-packages/mlflow/store/tracking/file_store.py", line 1670, in _read_yaml
+    return _read_helper(root, file_name, attempts_remaining=retries)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Apple/ZAINUL_AI/DS/ML-Project/AIRLINE COSTUMER SETISFECTION PREDICTION/.venv/lib/python3.12/site-packages/mlflow/store/tracking/file_store.py", line 1663, in _read_helper
+    result = read_yaml(root, file_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Apple/ZAINUL_AI/DS/ML-Project/AIRLINE COSTUMER SETISFECTION PREDICTION/.venv/lib/python3.12/site-packages/mlflow/utils/yaml_utils.py", line 104, in read_yaml
+    raise MissingConfigException(f"Yaml file '{file_path}' does not exist.")
+mlflow.exceptions.MissingConfigException: Yaml file '/Users/Apple/ZAINUL_AI/DS/ML-Project/AIRLINE COSTUMER SETISFECTION PREDICTION/mlruns/1/meta.yaml' does not exist.
+[2026-04-07 21:37:29,110] root - WARNING - Malformed experiment '1'. Detailed error Yaml file '/Users/Apple/ZAINUL_AI/DS/ML-Project/AIRLINE COSTUMER SETISFECTION PREDICTION/mlruns/1/meta.yaml' does not exist.
+Traceback (most recent call last):
+  File "/Users/Apple/ZAINUL_AI/DS/ML-Project/AIRLINE COSTUMER SETISFECTION PREDICTION/.venv/lib/python3.12/site-packages/mlflow/store/tracking/file_store.py", line 383, in search_experiments
+    exp = self._get_experiment(exp_id, view_type)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Apple/ZAINUL_AI/DS/ML-Project/AIRLINE COSTUMER SETISFECTION PREDICTION/.venv/lib/python3.12/site-packages/mlflow/store/tracking/file_store.py", line 481, in _get_experiment
+    meta = FileStore._read_yaml(experiment_dir, FileStore.META_DATA_FILE_NAME)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Apple/ZAINUL_AI/DS/ML-Project/AIRLINE COSTUMER SETISFECTION PREDICTION/.venv/lib/python3.12/site-packages/mlflow/store/tracking/file_store.py", line 1670, in _read_yaml
+    return _read_helper(root, file_name, attempts_remaining=retries)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Apple/ZAINUL_AI/DS/ML-Project/AIRLINE COSTUMER SETISFECTION PREDICTION/.venv/lib/python3.12/site-packages/mlflow/store/tracking/file_store.py", line 1663, in _read_helper
+    result = read_yaml(root, file_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Apple/ZAINUL_AI/DS/ML-Project/AIRLINE COSTUMER SETISFECTION PREDICTION/.venv/lib/python3.12/site-packages/mlflow/utils/yaml_utils.py", line 104, in read_yaml
+    raise MissingConfigException(f"Yaml file '{file_path}' does not exist.")
+mlflow.exceptions.MissingConfigException: Yaml file '/Users/Apple/ZAINUL_AI/DS/ML-Project/AIRLINE COSTUMER SETISFECTION PREDICTION/mlruns/1/meta.yaml' does not exist.
+[2026-04-07 21:37:29,187] __main__ - INFO - Loading data for model training...
+[2026-04-07 21:37:29,239] __main__ - INFO - Data loaded successfully.
+[2026-04-07 21:37:29,239] __main__ - INFO - Splitting data into train and test sets...
+[2026-04-07 21:37:29,247] __main__ - INFO - Data splitting completed.
+[2026-04-07 21:37:29,248] __main__ - INFO - Hyperparameters loaded: {'learning_rate': [0.01, 0.05, 0.1], 'n_estimators': [100, 200, 300], 'max_depth': [5, 10, 15]}
+[2026-04-07 21:37:29,249] __main__ - INFO - Starting GridSearchCV with LightGBM...
+[2026-04-07 21:39:25,669] __main__ - INFO - Model training completed.
+[2026-04-07 21:39:25,671] __main__ - INFO - Evaluating model...
+[2026-04-07 21:39:25,725] __main__ - INFO - Evaluation metrics: {'accuracy': 0.9437948125691737, 'precision': 0.943825712106087, 'recall': 0.9437948125691737, 'f1_score': 0.9437019144062373, 'confusion_matrix': [[11391, 474], [694, 8222]]}
+[2026-04-07 21:39:25,732] __main__ - INFO - Saving model to ./artifact/models/trained_model.pkl
+[2026-04-07 21:39:25,736] __main__ - INFO - Model saved successfully.
+[2026-04-07 21:39:28,433] __main__ - INFO - Run successful. Tracking URI: file:///Users/Apple/ZAINUL_AI/DS/ML-Project/AIRLINE COSTUMER SETISFECTION PREDICTION/mlruns

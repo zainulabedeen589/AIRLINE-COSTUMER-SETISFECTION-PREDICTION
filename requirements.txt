@@ -1,0 +1,15 @@
+numpy
+pandas
+setuptools
+mysql-connector-python
+scikit-learn
+matplotlib
+seaborn
+lightgbm
+xgboost
+tensorflow
+torch
+torchvision
+torchaudio
+tensorboard
+mlflow
